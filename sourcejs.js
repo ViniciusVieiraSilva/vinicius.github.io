@@ -11,6 +11,7 @@ function Mascara() {
 function MascCep(x) {
     x = x.replace(/\D/g, "");
     x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
+    return x;
 }
 
 function MascCPF(x) {
@@ -18,7 +19,7 @@ function MascCPF(x) {
     x = x.replace(/^(\d{3})(\d)/g, "$1.$2");
     x = x.replace(/^(\d{2})(\d)/g, "($1) $2");
     x = x.replace(/(\d)(\d{4})$/, "$1-$2");
-    return v;
+    return x;
 }
 
 function id(el) {
