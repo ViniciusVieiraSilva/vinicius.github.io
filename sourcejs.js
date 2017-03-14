@@ -23,7 +23,7 @@ function MascCpf(x) {
 }
 
 function MascUF(x) {
-    x = x.replace(/^[a-zA-Z]+$/g, "");
+    x = x.replace(/^D+$/g, "");
 }
 
 function id(el) {
