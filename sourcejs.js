@@ -26,6 +26,11 @@ function MascUF(x) {
     x = x.replace(/^D+$/g, "");
 }
 
+function exibe() {
+    var nome = document.getElementById('nome').value
+    alert(nome)
+}
+
 function id(el) {
     return document.getElementById(el);
 }
