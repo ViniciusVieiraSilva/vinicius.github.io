@@ -9,18 +9,13 @@ function Mascara() {
 }
 
 function MascCep(x) {
-    alert("ATUALIZA");
     x = x.replace(/\D/g, "");
     x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
-    alert(x);
     return x;
 }
 
 function MascCPF(x) {
-    alert("ATUALIZA");
     x = x.replace(/\D/g, "");
-    x = x.replace(/^(\d{2})(\d)/g, "($1) $2");
-    x = x.replace(/(\d)(\d{4})$/, "$1-$2");
     return x;
 }
 
