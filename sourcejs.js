@@ -11,12 +11,12 @@ function Mascara() {
 function MascCep(x) {
     x = x.replace(/\D/g, "");
     x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
-    return x;
+
 }
 
-function MascCPF(x) {
+function MascCpf(x) {
     x = x.replace(/\D/g, "");
-    x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
+    x = x.replace(/^(\d{})(\d)/g, "$1-$2");
     return x;
 }
 
@@ -28,6 +28,6 @@ window.onload = function() {
         mascara(this, MascCep);
     }
     id('cpf').onkeypress = function() {
-        mascara(this, MascCPF);
+        mascara(this, MascCpf);
     }
 }
