@@ -1,32 +1,33 @@
-function mascara(o,f){
-    v_obj=o
-    v_fun=f
-    setTimeout("execmascara()",1)
-}
-function execmascara(){
-    v_obj.value=v_fun(v_obj.value)
-}
-function mcep(v){
-    v=v.replace(/\D/g,"");//Remove tudo o que não é dígito
-    v=v.replace(/^(\d{5})(\d)/g,"$1-$2"); //Coloca parênteses em volta dos dois primeiros dígitos
-return v;
+function mascara(o, f) {
+    x_obj = o
+    x_fun = f
+    setTimeout("Mascara()", 1)
 }
 
-function mtel(v){
-    v=v.replace(/\D/g,"");//Remove tudo o que não é dígito
-    v=v.replace(/^(\d{2})(\d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    v=v.replace(/(\d)(\d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+function Mascara() {
+    x_obj.value = x_fun(x_obj.value)
+}
+
+function MascCep(x) {
+    x = x.replace(/\D/g, "");
+    x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
+}
+
+function MascTel(x) {
+    x = x.replace(/\D/g, "");
+    x = x.replace(/^(\d{2})(\d)/g, "($1) $2");
+    x = x.replace(/(\d)(\d{4})$/, "$1-$2");
     return v;
 }
 
-function id( el ){
-	return document.getElementById( el );
+function id(el) {
+    return document.getElementById(el);
 }
-window.onload = function(){
-	id('cep').onkeypress = function(){
-		mascara( this, mcep);
-	}
-	id('tel').onkeypress = function(){
-		mascara( this, mtel);
-	}
+window.onload = function() {
+    id('cep').onkeypress = function() {
+        mascara(this, MascCep);
+    }
+    id('tel').onkeypress = function() {
+        mascara(this, MascTel);
+    }
 }
