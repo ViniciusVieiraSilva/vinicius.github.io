@@ -1,23 +1,23 @@
 function mascara(o, f) {
     x_obj = o
     x_fun = f
-    setTimeout("Mascara()", 1)
+    setTimeout("execmascara()", 1)
 }
 
-function Mascara() {
+function execmascara() {
     x_obj.value = x_fun(x_obj.value)
 }
 
 function MascCep(x) {
     x = x.replace(/\D/g, "");
     x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
+    return x;
 }
 
 function MascCpf(x) {
-    x = x.replace(/\D/g, ""); //Remove tudo o que não é dígito
-    x = x.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-    x = x.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
-    return x;
+    v = v.replace(/(\d{3})(\d)/, "$1.$2")
+    v = v.replace(/(\d{3})(\d)/, "$1.$2")
+    v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
 }
 
 function id(el) {
