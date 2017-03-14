@@ -16,7 +16,6 @@ function MascCep(x) {
 
 function MascCPF(x) {
     x = x.replace(/\D/g, "");
-    x = x.replace(/^(\d{3})(\d)/g, "$1.$2");
     x = x.replace(/^(\d{2})(\d)/g, "($1) $2");
     x = x.replace(/(\d)(\d{4})$/, "$1-$2");
     return x;
