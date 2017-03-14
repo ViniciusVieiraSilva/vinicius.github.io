@@ -15,10 +15,15 @@ function MascCep(x) {
 }
 
 function MascCpf(x) {
+    x = x.replace(/\D/g, "");
     x = x.replace(/(\d{3})(\d)/, "$1.$2")
     x = x.replace(/(\d{3})(\d)/, "$1.$2")
     x = x.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
     return x;
+}
+
+function MascUF(x) {
+    x = x.replace(/\[A-Za-z]/g, "");
 }
 
 function id(el) {
@@ -30,5 +35,8 @@ window.onload = function() {
     }
     id('CPF').onkeypress = function() {
         mascara(this, MascCpf);
+    }
+    id('UF').onkeypress = function() {
+        mascara(this, MascUF);
     }
 }
