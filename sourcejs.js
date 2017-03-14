@@ -22,10 +22,6 @@ function MascCpf(x) {
     return x;
 }
 
-function MascUF(x) {
-    x = x.replace(/[^A-Za-z]+$/g, "");
-}
-
 function exibe() {
     var nome = document.getElementById('nome').value
     var end = document.getElementById('endereco').value
@@ -42,8 +38,5 @@ window.onload = function() {
     }
     id('CPF').onkeypress = function() {
         mascara(this, MascCpf);
-    }
-    id('UF').onkeypress = function() {
-        mascara(this, MascUF);
     }
 }

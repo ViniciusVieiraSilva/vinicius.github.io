@@ -9,21 +9,55 @@
 
 
 <body>
-    <form id="form1" name="form1" method="post" action="" onsubmit="return exibe()">
+    <form id="form1" name="form1" method="post" action="" onsubmit="exibe()">
         <p>
             <label for="Nome">Nome:</label>
             <input type="text" name="Nome" id="nome" placeholder="Nome" required/>
             <label for="Endereço">Endereço:</label>
             <input type="text" name="Endereço" id="endereco" placeholder="Endereço" required/>
-            <input type="submit" value="Enviar">
+            <label for="Número">Número:</label>
+            <input type="number" name="numero" id="numero" min="1" max="99999" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
             <br/><br/>
             <label for="CPF">CPF:</label>
             <input type="text" maxlength="14" id="CPF" name="CPF" placeholder="XXX.XXX.XXX-XX" required/>
             <label for="CEP">CEP:</label>
             <input type="text" maxlength="9" id="cep" name="cep" placeholder="XXXXX-XXX" required/>
             <br/><br/>
+            <label for="idade">Idade:<label/>
+            <input type="number" name="idade" id="idade" min="1" max="100" required min="1" max="150" maxlength="3" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" />
             <label for="Estado">Estado:</label>
-            <input type="range" maxlength="2" id="UF" name="estado" placeholder="UF" />
+            <select maxlength="2 " id="UF " name="estado" size="1"> 
+                <option value="AC">AC</option>
+	            <option value="AL">AL</option>
+	            <option value="AP">AP</option>
+	            <option value="AM">AM</option>
+	            <option value="BA">BA</option>
+	            <option value="CE">CE</option>
+	            <option value="DF">DF</option>
+	            <option value="ES">ES</option>
+	            <option value="GO">GO</option>
+	            <option value="MA">MA</option>
+	            <option value="MT">MT</option>
+	            <option value="MS">MS</option>
+	            <option value="MG">MG</option>
+	            <option value="PA">PA</option>
+	            <option value="PB">PB</option>
+	            <option value="PR">PR</option>
+	            <option value="PE">PE</option>
+	            <option value="PI">PI</option>
+	            <option value="RJ">RJ</option>
+	            <option value="RN">RN</option>
+	            <option value="RS">RS</option>
+	            <option value="RO">RO</option>
+	            <option value="RR">RR</option>
+	            <option value="SC">SC</option>
+	            <option value="SP">SP</option>
+	            <option value="SE">SE</option>
+	            <option value="TO">TO</option>
+            </select>
+            <br/><br/>
+            <input type="submit" value="Enviar">
+            <br/>
 
         </p>
     </form>
