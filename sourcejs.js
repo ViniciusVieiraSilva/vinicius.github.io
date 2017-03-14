@@ -29,8 +29,8 @@ function MascUF(x) {
 function exibe() {
     var nome = document.getElementById('nome').value
     var end = document.getElementById('endereco').value
-    alert("Nome:", nome)
-    alert("Endereço:", end)
+    alert("Nome:")
+    alert(nome)
 }
 
 function id(el) {
