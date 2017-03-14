@@ -9,6 +9,7 @@ function Mascara() {
 }
 
 function MascCep(x) {
+    alert("ATUALIZA");
     x = x.replace(/\D/g, "");
     x = x.replace(/^(\d{5})(\d)/g, "$1-$2");
     alert(x);
