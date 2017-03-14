@@ -18,6 +18,7 @@ function MascCpf(x) {
     x = x.replace(/(\d{3})(\d)/, "$1.$2")
     x = x.replace(/(\d{3})(\d)/, "$1.$2")
     x = x.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+    return x;
 }
 
 function id(el) {
@@ -27,7 +28,7 @@ window.onload = function() {
     id('cep').onkeypress = function() {
         mascara(this, MascCep);
     }
-    id('cpf').onkeypress = function() {
+    id('CPF').onkeypress = function() {
         mascara(this, MascCpf);
     }
 }
