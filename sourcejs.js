@@ -15,9 +15,9 @@ function MascCep(x) {
 }
 
 function MascCpf(x) {
-    v = v.replace(/(\d{3})(\d)/, "$1.$2")
-    v = v.replace(/(\d{3})(\d)/, "$1.$2")
-    v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+    x = x.replace(/(\d{3})(\d)/, "$1.$2")
+    x = x.replace(/(\d{3})(\d)/, "$1.$2")
+    x = x.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
 }
 
 function id(el) {
