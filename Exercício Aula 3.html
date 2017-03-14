@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+<head>
+<script>
+	function funcao(op){
+		var v1 = parseInt(document.getElementById("valor1").value)
+		var v2 = parseInt(document.getElementById("valor2").value)
+		var resultado
+		switch(op){
+			case '+':
+				resultado = v1 + v2
+				break
+			case '-':
+				resultado = v1 - v2
+				break
+			case '*':
+				resultado = v1 * v2
+				break
+			case '/':
+				resultado = v1 / v2
+				break
+		}	
+		document.getElementById("resultado").innerHTML = resultado
+	}
+	</script>
+</head>
+<body>
+	<form id="form1" name="form1" method="post" action="" onsubmit="return calcula()">
+	<p>
+		<label for="valor1">Valor 1</label>
+		<input type="text" name="Valor 1" id="valor1" placeholder="Valor 1" title="Valor 1" />
+		<br/><br/>
+		<label for="valor2">Valor 2</label>
+		<input type="text" name="Valor 2" id="valor2" placeholder="Valor 2" title="Valor 2" />
+	</p>
+	<p>
+		<input type="button" name="soma" id="soma" title="Somar" value="+" onclick="funcao('+')"/>
+		<input type="button" name="subt" id="subt" title="Subtrair" value="-" onclick="funcao('-')"/>
+		<input type="button" name="mult" id="mult" title="Multiplicar" value="x" onclick="funcao('*')"/>
+		<input type="button" name="div" id="div" title="Dividir" value="÷" onclick="funcao('/')"/>
+	</p>
+	<p>
+		<label for="resultado" id="res">Resultado: </label>
+		<label id="resultado"></label>
+	</p>
+	</form>
+</body>
+</html>

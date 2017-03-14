@@ -1,0 +1,26 @@
+﻿<head>
+<script>
+	function validaCampos()
+	{
+		var inicio=document.getElementById("inicio").value
+		var fim=document.getElementById("fim").value
+		var result
+		if(fim>inicio)
+			result=fim-inicio
+			else
+		result=inicio-fim
+		alert(result);
+		return false;
+	}
+	</script>
+</head>
+<body>
+	<form onsubmit="validaCampos()">
+ 	 	Inicio:<input type="text" name="inicio" id="inicio"><br>
+ 	 	Fim:<input type="text" name="fim" id="fim"><br>
+  		<input type="submit" value="OK">
+
+
+
+</form>
+<body>
