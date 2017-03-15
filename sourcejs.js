@@ -25,7 +25,12 @@ function MascCpf(x) {
 function exibe() {
     var nome = document.getElementById('nome').value
     var end = document.getElementById('endereco').value
-    var dados = ("Nome: " + nome + "\nEndereço: " + end)
+    var idade = document.getElementById('idade').value
+    var cpf = document.getElementById('CPF').value
+    var cep = document.getElementById('cep').value
+    var num = document.getElementById('numero').value
+    var est = document.getElementById('UF').value
+    var dados = ("Nome: " + nome + "\nEndereço: " + end + "\nIdade: " + idade + "\nCPF: " + cpf + "\nCEP: " + cep + "\nNúmero: " + num + "\nEstado: " + est)
     alert(dados)
 }
 
